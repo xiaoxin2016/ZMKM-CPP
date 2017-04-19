@@ -56,7 +56,6 @@ int main(){
     while (flag==0){
         cal calone;
         if(calone.read()==0){
-            flag=1;
             exit(0);
         }
         calone.print();
