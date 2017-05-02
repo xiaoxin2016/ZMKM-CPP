@@ -12,14 +12,14 @@ using namespace std;
 
 class Stock{
 private:
-    char stockcode[10];
+    string stockcode;
     int quan;
     double price;
 public:
-    Stock(char na[],int q=1000,double p=8.98){
-        strcpy(this->stockcode,na);
-        this->quan=q;
-        this->price=p;
+    Stock(string na,int q=1000,double p=8.98){
+        stockcode=na;
+        quan=q;
+        price=p;
     }
     void print(){
         cout<<stockcode<<endl;
@@ -30,10 +30,8 @@ public:
 
 int main(int argc, const char * argv[]) {
     Stock ob1("600001",3000,5.67);
-    //Xcode Waring: ISO C++11 does not allow conversion form string literal to 'char *'
     ob1.print();
     Stock ob2("600002");
-    //Xcode Waring: ISO C++11 does not allow conversion form string literal to 'char *'
     ob2.print();
     return 0;
 }
