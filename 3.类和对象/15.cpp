@@ -64,5 +64,4 @@ int main(int argc, const char * argv[]) {
     c6=c1.div(c2);
     c6.print();
     return 0;
-    return 0;
 }

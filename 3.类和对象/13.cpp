@@ -37,5 +37,4 @@ int main(int argc, const char * argv[]) {
     Boat b(5);
     cout<<getTotalWeight(c,b)<<endl;
     return 0;
-    return 0;
 }
