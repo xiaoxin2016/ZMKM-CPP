@@ -79,7 +79,7 @@ public:
         double change;
         change=average_balance*rate*(double(current_date)/365);
         record(change);
-        accumulation=1;
+        accumulation=0;
     }
 };
 
@@ -94,7 +94,7 @@ int main(int argc, const char * argv[]) {
     cout<<"请提供您的年利率：";
     cin>>rate;
     SavingsAccount account(number,rate);
-    account.set_current_date(0);
+    account.set_current_date(1);
     
 meau:
     cout<<endl<<"欢迎光临银行，请问有什么可以帮到您？"<<endl;
