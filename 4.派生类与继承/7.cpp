@@ -41,7 +41,7 @@ public:
     }
 };
 
-class Brithtime:public Time,public Date{
+class Birthtime:public Time,public Date{
 protected:
     string name;
 public:
@@ -58,7 +58,7 @@ public:
 };
 
 int main(int argc, const char * argv[]) {
-    Brithtime boy(2000,12,21,10,15,25,"皮皮");
+    Birthtime boy(2000,12,21,10,15,25,"皮皮");
     boy.display();
     return 0;
 }
