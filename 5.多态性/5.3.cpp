@@ -80,8 +80,8 @@ int main(int argc, const char * argv[]) {
     cout<<"Display object Z=X+Y"<<endl;
     Z=X+Y;
     Z.display();
-    cout<<"Display object Z=Y-X"<<endl;
-    Z=Y-X;
+    cout<<"Display object Z=X-Y"<<endl;
+    Z=X-Y;
     Z.display();
     return 0;
 }
