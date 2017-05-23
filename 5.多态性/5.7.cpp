@@ -17,7 +17,7 @@ public:
     virtual void speak(){
         //Nothing Here. Just to control format;
     }
-    ~Mammal(){
+    virtual ~Mammal(){
         cout<<"Mammal destructor..."<<endl;
     }
 };
@@ -34,6 +34,7 @@ public:
     }
     
 };
+
 int main(int argc, const char * argv[]) {
     Mammal * pDog=new Dog;
     pDog->speak();
