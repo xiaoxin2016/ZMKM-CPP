@@ -12,13 +12,10 @@ const double Pi=3.14;
 
 class Shape{
 public:
-    virtual double getArea(){
-        //Nothing Here. Just to control format;
-        return 0;
-    }
-    virtual double getPerim(){
-        //Nothing Here. Just to control format;
-        return 0;
+    virtual double getArea()=0;
+    virtual double getPerim()=0;
+    virtual ~Shape(){
+        //Nothing Here. Just to remove Warning.
     }
 };
 class Circle:public Shape{
