@@ -24,6 +24,8 @@ public:
         //Just Remove Warning.
     }
 };
+
+
 class stack:public list{
 public:
     void store(int inc){
@@ -45,7 +47,7 @@ public:
         int i;
         list *p;
         if (!head){
-            cout<<"链表为空"<<endl;
+            cout<<"栈为空"<<endl;
             return 0;
         }
         i=head->num;
