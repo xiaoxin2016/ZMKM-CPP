@@ -12,27 +12,27 @@ using namespace std;
 
 int main(int argc, const char * argv[])
 {
-    fstream write;
-    write.open("text.dat",ios::out);
-    if (!write){
+    ofstream out("text.dat",ios::binary);
+    if (!out){
         cout<<"Error!"<<endl;
         exit(-1);
     }
-    write<<"I am a student."<<endl;
-    write<<"I am a college student."<<endl;
-    write.close();
+    char str1[]="I am a student.";
+    char str2[]="I am a college student.";
+    out.write(str1, sizeof(str1));
+    out.write(str2, sizeof(str2));
+    out.close();
     
-    fstream read;
-    read.open("text.dat",ios::in);
-    if (!read){
+    ifstream in("text.dat",ios::binary);
+    if (!in){
         cout<<"Error!"<<endl;
         exit(-1);
     }
-    for (int i=0;i<2;i++){
-        char str[50];
-        read.getline(str,sizeof(str));
-        cout<<str<<endl;
-    }
-    read.close();
+    in.read(str1, sizeof(str1));
+    cout<<str1<<endl;
+    in.read(str2, sizeof(str2));
+    cout<<str2<<endl;
+    in.close();
+    
     return 0;
 }
